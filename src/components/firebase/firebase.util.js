@@ -31,7 +31,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
         ...additionalData,
       });
     } catch (error) {
-      console.log('error creating user', error.message);
+      console.error('error creating user', error.message);
     }
   }
   return userRef;
@@ -42,7 +42,6 @@ export const addCollectionAndDocuments = async (
   objectsToAdd
 ) => {
   const collectionRef = firestore.collection(collectionKey);
-  console.log(collectionRef);
 
   const batch = firestore.batch();
 
@@ -75,17 +74,14 @@ export const convertCollectionsSnapshotToMap = (collections) => {
 
 firebase.initializeApp(config);
 
-
-
-
 export const getCurrentUser = () => {
-   return new Promise((resolve,reject) => {
-     const unsubscribe = auth.onAuthStateChanged( userAuth => {
-       unsubscribe();
-       resolve(userAuth);
-     }, reject)
-   })
-}
+  return new Promise((resolve, reject) => {
+    const unsubscribe = auth.onAuthStateChanged((userAuth) => {
+      unsubscribe();
+      resolve(userAuth);
+    }, reject);
+  });
+};
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
