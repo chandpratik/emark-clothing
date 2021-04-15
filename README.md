@@ -1,4 +1,4 @@
-<h1>Netflix Clone App</h1>
+<h1>Clothing Ecom</h1>
 
 ## [Check out the live version ](https://clothing-ecom.netlify.app/)
 
