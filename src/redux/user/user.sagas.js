@@ -34,7 +34,7 @@ export function* getSnapshotFromUserAuth(userAuth, additionalData) {
     );
   } catch (error) {
     yield put(signInFailure(error));
-    console.log(error);
+    
   }
 }
 
@@ -58,7 +58,7 @@ export function* signInWithGoogle() {
     yield getSnapshotFromUserAuth(user);
   } catch (error) {
     yield put(signInFailure(error));
-    console.log(error);
+    
   }
 }
 
