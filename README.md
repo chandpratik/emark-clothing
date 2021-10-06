@@ -1,67 +1,45 @@
-<h1>Clothing Ecom</h1>
+# Ecommerce App
 
-## [Check out the live version ](https://clothing-ecom.netlify.app/)
+This application (a Netflix clone) was built using React (Custom Hooks, Context), Firebase & Styled Components. I have built the following pages within this application: sign in, sign up, browse & lastly the homepage. There are four different pages, some using protected routes with auth listeners. Firebase firestore handles all the data and that data is retrieved using a custom hook; authentication is used on all pages, which is handled by Firebase as well.
 
-<h2>Screenshot</h2>
+## 🔗 Links
+
+[Deployed App](https://clothing-ecom.netlify.app/)
+
+[Github Repo](https://github.com/chandpratik/netflix-clone)
+
+## Screenshots
 
 <img src="./src/images/ss.png" style="box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);" />
 
-<h1>🛠 Installation & Set Up</h1>
+## Tech Stack
 
-#### 1. Install and use the correct version of Node
+**Client:** React, Styled Components, Redux, React-Router.
 
-```
-npm install
-```
+**Backend:** Firebase.
 
-#### 2. Start the development server
+## Run Locally
 
-```
-npm start
-```
+Clone the project
 
-# 🛠 Set Up for firebase
-
-1. Create a Firebase project in the <a href="https://console.firebase.google.com/">Firebase console</a>, click Add project, then follow the on-screen instructions to create a Firebase project or to add Firebase services to an existing GCP project.
-
-2) Navigate to the Database section of the Firebase console. You'll be prompted to select an existing Firebase project. Follow the database creation workflow.
-3) Select a starting mode for your Firebase Security Rules:
-
-   - Test mode
-
-     Good for getting started with the mobile and web client libraries, but allows anyone to read and overwrite your data. After testing, **make sure to review the [Understand Firebase Realtime Database Rules](https://firebase.google.com/docs/database/security) section.**
-     To get started with the web, iOS, or Android SDK, select test mode.
-
-   - Locked mode
-
-     Denies all reads and writes from mobile and web clients. Your authenticated application servers can still access your database.
-
-4.  Click **Done**.
-
-When you enable Realtime Database, it also enables the API in the [Cloud API Manager](https://console.cloud.google.com/projectselector/apis/api/firebasedatabase.googleapis.com/overview).
-
-## Firebase config object
-
-To initialize Firebase in your app, you need to provide your app's Firebase project configuration.
-
-```
-import  firebase  from  "firebase/app";
-import  "firebase/firestore";
-
-const  firebaseConfig = firebase.initializeApp({
-apiKey:  "API-KEY",
-authDomain:  ""project-id.firebaseapp.com"",
-databaseURL:  "https://project-id.firebaseio.com",
-projectId:  "project-id",
-storageBucket:  "project-id.appspot.com",
-messagingSenderId:  "sender-id",
-appId:  "app-id",
-measurementId:  "G-measurement-id",
-});
-
-export { firebaseConfig  as  firebase };
+```bash
+  git clone https://github.com/chandpratik/emark-clothing.git
 ```
 
-<br />
+Go to the project directory
 
-# #🚀HappyCoding
+```bash
+  cd emark-clothing
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
